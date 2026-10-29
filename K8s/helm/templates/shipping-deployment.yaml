@@ -13,6 +13,8 @@ spec:
     metadata:
       labels:
         service: shipping
+      annotations:
+        instrumentation.opentelemetry.io/inject-java: "true"
     spec:
       {{ if .Values.psp.enabled }}
       serviceAccountName: robot-shop
